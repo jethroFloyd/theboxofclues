@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)http://imx.evenfly.com/male/color-with-animation/ -->
+
+<script src="js/sweetalert.min.js">
+</script>
+ <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
 <html lang="en" class="uk-notouch" style="overflow: auto;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
   <title>The Box of Clues</title>
@@ -34,15 +37,15 @@
           <br>
           <br><br><br><br>
           
-          <input type="email" name="email" placeholder="Name" required class="form-control input-lg" value="Enter Your Name" />
+          <input type="text" name="name" required class="form-control input-lg" placeholder="Who Are You?" />
           
-          <input type="password" class="form-control input-lg" id="password" placeholder="What's the Password?" required="" />
+          <input type="password" name="pwd" class="form-control input-lg" id="password" placeholder="What's the Password?" required="" />
           
           
           <div class="pwstrength_viewport_progress"></div>
           
           
-          <button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Sign in</button>
+          <button type="submit" name="go" class="btn btn-lg btn-primary btn-block" onclick="check(this.form)">Sign in</button>
          <!-- <div>
             <a href="#">Create account</a> or <a href="#">reset password</a>
           </div>-->
@@ -67,6 +70,43 @@
 </div>
 
 
+
+<script type="text/javascript">
+function Redirect()
+{
+    location.href="final.html";
+}
+
+function check(oForm)
+{
+  var guess = oForm.pwd.value;
+
+  if (guess != "5hb0e7Papr")
+  {
+    swal({ 
+      title: "Oops.. Not quite there!",   
+      text: ":|",   
+      type: "error",   
+      confirmButtonText: "Try Again!!",
+      timer: null });
+    return 1;
+    
+  }
+  else if (guess == "5hb0e7Papr")
+  {
+    swal({ 
+      title: "Great!",   
+      text: ":)",   
+      type: "success",   
+      confirmButtonText: "Cool",
+      timer: null });
+      Redirect();
+      setTimeout('window.location.href="clue1.html"', 0);
+      return 0;
+    
+  }
+}
+</script>
  <script async src="js/analytics.js"></script><script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-scrollspy.js"></script>
