@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Happy Birthday Elena!</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+<embed src="media/wish.mp3" autostart="true" loop="true"
+width="2" height="0">
+</embed>
+<noembed>
+<bgsound src="media/wish.mp3" loop="infinite">
+</noembed>
+	
+<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<p><span class="comments">/**</span><br />
+				  <span class="space"/><span class="comments">* Hi!</span><br />
+				  <span class="space"/><span class="comments">* You are probably waking up now in the land of the rising sun!</span><br />
+				  <span class="space"/><span class="comments">* I am so far away from you there's not much</span><br />
+				<span class="space"/><span class="comments">* I can do.. so I'll just do what I do all the time</span><br />
+				<span class="space"/><span class="comments">* ... write some code.</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				
+				Girl you = <span class="keyword">new</span> Girl(<span class="string">"You"</span>);<br />
+				Boy i = <span class="keyword">new</span> Boy(<span class="string">"Me"</span>);<br />
+				<span class="comments">// Somewhere during a dinner at a conference, </span><br />
+				i.met(you);<br />
+				<span class="comments">// .. And then, we sneaked out into the city </span><br />
+				explore(Delhi).attrib(you,me);<br />
+				<span class="comments">// Since then, we've come a long way</span><br />
+				<span class="comments">// You've tolerated me through everything!</span><br />
+				
+				<span class="comments">// Know that I'll take care of you</span><br />
+				i.takeCareOf(you);<br />
+				<span class="comments">// I want you to stay just as lovely you are now</span><br />
+				<span class="string">boolean </span>you.Unchanged == <span class="keyword">true</span>;<br />
+                <span class="comments">// And we will explore new horizons together!</span><br />
+		 	  find(Places, Experiences).with(you);<br />
+              
+		<span class="comments">// I love talking to you!</span><br />
+				for (<span class="string">conversation </span> c : with(you))    cherishForever(c);<br />
+		<span class="comments">// And I hope that this will never come between us!</span><br />
+				<span class="string"> Segmentation Fault: Core dumped. </span> <br />
+<span class="comments">// But what I really want you to do is stay happy. </span><br />
+<span class="comments">// Sometimes, you work too much! </span><br />
+<span class="comments">// Relax, enjoy your life. </span><br />
+<span class="comments">// Enjoy the colours and the gray around you. </span><br />
+				<span class="string">assert</span>.stayHappy(you);<br />
+				<br /><br />
+				Bhalo theko, shubho jonmodin. Lots of love. (==)<br />
+				PS : You are growing old every day now. Next year,<br>
+				I'll send in hair-fall solutions and anti-ageing creams.<br>
+				;)
+		      </p>
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						
+					  <div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+                    	Happy Birthday!<br/>
+						Have a lovely year.
+						<div class="signature">  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2014, 11, 4);
+		together.setHours(00);
+		together.setMinutes(00);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
