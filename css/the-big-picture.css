@@ -1,8 +1,3 @@
-/*!
- * Start Bootstrap - The Big Picture HTML Template (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
 
 body {
      margin: 0;
@@ -13,6 +8,3 @@ body {
      font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-input {
-    background-color: rgba(255, 255, 255, 0.5);
-}
