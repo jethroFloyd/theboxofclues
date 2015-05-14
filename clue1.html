@@ -100,19 +100,20 @@ header("Location: http://www.google.com/");
     </div>
 </div>
 
-<script>
+<script type="text/javascript">
 function check(oForm)
 {
   var guess = oForm.number.value;
 
-  if (guess == "")
+  if (guess != "2000")
   {
     swal({ 
-      title: "Unhun",   
+      title: "Oops.. Not quite there!",   
       text: ":|",   
       type: "error",   
-      confirmButtonText: "Answer!!!",
+      confirmButtonText: "Try Again!!",
       timer: null });
+    
   }
   else if (guess == "2000")
   {
@@ -122,18 +123,8 @@ function check(oForm)
       type: "success",   
       confirmButtonText: "Cool",
       timer: null });
-    window.location.href("http://stackoverflow.com");
-    var url = "http://stackoverflow.com";    
-$(location).attr('href',url);
-  }
-  else
-  {
-    swal({ 
-      title: "Oops",   
-      text: ":(",   
-      type: "error",   
-      confirmButtonText: "Try Again",
-      timer: null });
+    
+    
   }
 }
 </script>
