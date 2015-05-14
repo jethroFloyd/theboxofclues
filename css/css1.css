@@ -1,4 +1,12 @@
-body { margin: 0; padding: 0; }
+body { margin: 0; padding: 0; font-size: 30px}
+
+p {
+    font-size: 35px;  
+    line-height: 0.9;
+    color: white;
+    text-align: center;
+
+}
 
 #blurred-image-container {
     display:block;
@@ -13,7 +21,7 @@ body { margin: 0; padding: 0; }
 
 .img-src { 
     position: absolute;
-    background:url(http://bromleydemo.files.wordpress.com/2013/10/blossom.jpg?w=600) center center;
+    background:url('../img/road.jpg') center center;
     background-size: cover;
     top: -10%;
     bottom: 10%;
@@ -44,3 +52,5 @@ body { margin: 0; padding: 0; }
     border: 5px solid #fff;
     margin-bottom:50px;
 }
+
+.center { float: none; margin-left: auto; margin-right: auto; }
