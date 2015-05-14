@@ -1,0 +1,56 @@
+body { margin: 0; padding: 0; font-size: 30px}
+
+p {
+    font-size: 35px;  
+    line-height: 0.9;
+    color: white;
+    text-align: center;
+
+}
+
+#blurred-image-container {
+    display:block;
+    padding:0;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index:-1;
+}
+
+.img-src { 
+    position: absolute;
+    background:url('../img/del.jpg') center center;
+    background-size: cover;
+    top: -10%;
+    bottom: 10%;
+    left: -10%;
+    right: 10%;
+    width:120%;
+    height:120%;
+}
+
+.img-src.blurred-image {
+    opacity:0;
+    -webkit-filter: blur(20px) brightness(0.7);
+    -ms-filter: blur(20px) brightness(0.7);
+    -o-filter: blur(20px) brightness(0.7);
+    filter: blur(20px) brightness(0.7);
+}
+
+.content {
+    padding:150px 50px;
+    color:#fff;
+    text-align:center;
+}
+
+.avatar {
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    border: 5px solid #fff;
+    margin-bottom:50px;
+}
+
+.center { float: none; margin-left: auto; margin-right: auto; }
