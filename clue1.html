@@ -9,8 +9,6 @@
     $number = $_POST['number'];
 
    
-header("Location: http://www.google.com/");
-
   if ($number == 50) {
     $err = 'Great!';
   }
@@ -101,6 +99,11 @@ header("Location: http://www.google.com/");
 </div>
 
 <script type="text/javascript">
+function Redirect()
+{
+    location.href="clue2.html";
+}
+
 function check(oForm)
 {
   var guess = oForm.number.value;
@@ -113,6 +116,7 @@ function check(oForm)
       type: "error",   
       confirmButtonText: "Try Again!!",
       timer: null });
+    return 1;
     
   }
   else if (guess == "2000")
@@ -123,11 +127,14 @@ function check(oForm)
       type: "success",   
       confirmButtonText: "Cool",
       timer: null });
-    
+      Redirect();
+      setTimeout('window.location.href="clue2.html"', 0);
+      return 0;
     
   }
 }
 </script>
+
 
  <script async src="js/analytics.js"></script><script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
